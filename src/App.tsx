@@ -17,32 +17,51 @@ function App() {
     <>
       <h1>Berikan penilaian terhadap e-commerce di bawah</h1>
       
-      <main>
-        <div className="app">
-          <img src={tokopedia} alt="tokopedia" />
-          <div className="card">
-            <button onClick={() => setCountT((countT) => countT - 1)}>-</button>
-            <input type="text" value={countT} />
-            <button onClick={() => setCountT((countT) => countT + 1)}>+</button>
-          </div>
+      {/* TOKOPEDIA APP */}
+      <div className="app">
+        <img src={tokopedia} alt="tokopedia" />
+        <div className="card">
+          <button onClick={() => setCountT((countT) => countT - 1)}>-</button>
+          <input type="text" value={countT} />
+          <button onClick={() => setCountT((countT) => countT + 1)}>+</button>
         </div>
-        <div className="app">
-          <img src={shopee} alt="shopee" />
-          <div className="card">
-            <button onClick={() => setCountS((counts) => counts - 1)}>-</button>
-            <input type="text" value={countS} />
-            <button onClick={() => setCountS((counts) => counts + 1)}>+</button>
-          </div>
+      </div>
+
+      {/* SHOPEE APP */}
+      <div className="app">
+        <img src={shopee} alt="shopee" />
+        <div className="card">
+          <button onClick={() => setCountS((counts) => counts - 1)}>-</button>
+          <input type="text" value={countS} />
+          <button onClick={() => setCountS((counts) => counts + 1)}>+</button>
         </div>
-        <div className="app">
-          <img src={lazada} alt="shopee" />
-          <div className="card">
-            <button onClick={() => setCountL((countl) => countl - 1)}>-</button>
-            <input type="text" value={countL} />
-            <button onClick={() => setCountL((countl) => countl + 1)}>+</button>
-          </div>
+      </div>
+
+      {/* SHOPEE APP */}
+      <div className="app">
+        <img src={lazada} alt="shopee" />
+        <div className="card">
+          <button onClick={() => setCountL((countl) => countl - 1)}>-</button>
+          <input type="text" value={countL} />
+          <button onClick={() => setCountL((countl) => countl + 1)}>+</button>
         </div>
-      </main>
+      </div>
+
+      <button 
+        type='submit' 
+        className='submit' 
+        onClick={() => {
+          console.log(
+          `Thanks for your rate. Here's your rate value as well
+Tokopedia rate = ${countT}
+Shopee rate = ${countS}
+Lazada rate = ${countL}`
+        );
+          alert(
+          `Thank you for your rate :D Check your log`)}
+        }>
+          Submit
+      </button>
     </>
   )
 }
