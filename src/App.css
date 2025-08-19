@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0 10px 0;
+  width: 100%;
+}
+
+.app img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.card input {
+  padding: 5px;
+  border: none;
+  text-align: center;
+  width: 50px;
+  background-color:#242424;
+}
