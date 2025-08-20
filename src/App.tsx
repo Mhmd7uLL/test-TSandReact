@@ -11,6 +11,9 @@ function App() {
 
   if (countT < 0 || countS < 0 || countL < 0) {
     alert('Must higher than 0')
+    setCountT(0);
+    setCountS(0);
+    setCountL(0);
   }
 
   return (
